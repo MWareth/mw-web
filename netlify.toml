@@ -1,11 +1,5 @@
-# Netlify config for marwanwareth.com — static site at repo root, no build step.
+# marwanwareth.com — static site at repo root, no build step.
+# Netlify's Primary Domain setting handles www -> apex canonicalisation.
 [build]
   publish = "."
   command = ""
-
-# Redirect the apex domain to the canonical www host.
-[[redirects]]
-  from = "https://marwanwareth.com/*"
-  to = "https://www.marwanwareth.com/:splat"
-  status = 301
-  force = true

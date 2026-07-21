@@ -12,13 +12,13 @@
 <meta name="geo.region" content="AE-DU" />
 <meta name="geo.placename" content="Dubai" />
 <!-- canonical domain -->
-<link rel="canonical" href="https://www.marwanwareth.com/" />
+<link rel="canonical" href="https://marwanwareth.com/" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Marwan Wareth" />
 <meta property="og:title" content="Marwan Wareth — Creative Director & Photographer, Dubai" />
 <meta property="og:description" content="Dubai-based creative director & photographer for food, hospitality, product & lifestyle brands. Photography, film & direction." />
-<meta property="og:image" content="https://www.marwanwareth.com/img/og.jpg" />
+<meta property="og:image" content="https://marwanwareth.com/img/og.jpg" />
 <meta property="og:locale" content="en_AE" />
 <meta name="twitter:card" content="summary_large_image" />
 
@@ -27,11 +27,11 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "@id": "https://www.marwanwareth.com/#business",
+  "@id": "https://marwanwareth.com/#business",
   "name": "Marwan Wareth — Creative Director & Photographer",
   "description": "Creative director and photographer in Dubai for food, restaurants, hospitality, products, portraits and lifestyle brands.",
-  "image": "https://www.marwanwareth.com/img/og.jpg",
-  "url": "https://www.marwanwareth.com/",
+  "image": "https://marwanwareth.com/img/og.jpg",
+  "url": "https://marwanwareth.com/",
   "email": "marwan.abdulwareth@gmail.com",
   "priceRange": "$$",
   "areaServed": { "@type": "City", "name": "Dubai" },
@@ -92,7 +92,7 @@
   .nav{display:flex;align-items:center;justify-content:space-between;height:82px}
   .brand{font-weight:600;font-size:16px;letter-spacing:-.02em;display:flex;align-items:center}
   .brand em{color:var(--mut);font-style:normal}
-  .mwmark{height:19px;width:auto;margin-right:11px;color:var(--ink);overflow:visible}
+  .mwmark{height:22px;width:auto;margin-right:11px;display:block}
   .nav .links{display:flex;gap:34px;align-items:center;font-family:var(--mono);font-size:13px}
   .nav .links a{color:var(--mut);transition:color .2s}
   .nav .links a:hover,.nav .links a.act{color:var(--ink)}
@@ -237,10 +237,7 @@
   <header id="hdr">
     <div class="full nav">
       <a class="brand" href="#top" data-h aria-label="Marwan Wareth — home">
-        <svg class="mwmark" viewBox="0 0 232 118" fill="none" aria-hidden="true">
-          <path d="M12 112 L34 8 L64 84 L94 8 L116 112" stroke="currentColor" stroke-width="21" stroke-linejoin="miter" stroke-miterlimit="6"/>
-          <path d="M120 8 L142 112 L172 36 L202 112 L224 8" stroke="currentColor" stroke-width="21" stroke-linejoin="miter" stroke-miterlimit="6"/>
-        </svg>
+        <img class="mwmark" id="mwLogo" src="img/logo-dark.png" alt="Marwan Wareth" />
         <span>Marwan Wareth <em>— Dubai</em></span>
       </a>
       <nav class="links">
@@ -393,8 +390,9 @@
     document.querySelectorAll('[data-wa]').forEach(a => a.href = link);
   }
 
-  // Logo is an inline SVG monogram in the header — it recolours itself for any
-  // skin via currentColor, so nothing to load here.
+  // Logo: black mark on light skins, white mark on Noir.
+  const mwLogo = document.getElementById('mwLogo');
+  if (mwLogo) mwLogo.src = site.dataset.skin === 'noir' ? 'img/logo-light.png' : 'img/logo-dark.png';
 
   // role rotator
   const rots = document.querySelectorAll('.hero .rot span');
