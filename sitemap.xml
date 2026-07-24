@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://marwanwareth.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://marwanwareth.com/gallery.html</loc><priority>0.9</priority></url>
-  <url><loc>https://marwanwareth.com/real-estate.html</loc><priority>0.8</priority></url>
-  <url><loc>https://marwanwareth.com/food.html</loc><priority>0.8</priority></url>
-  <url><loc>https://marwanwareth.com/landscapes.html</loc><priority>0.8</priority></url>
   <url><loc>https://marwanwareth.com/lifestyle.html</loc><priority>0.8</priority></url>
-  <url><loc>https://marwanwareth.com/videos.html</loc><priority>0.7</priority></url>
+  <url><loc>https://marwanwareth.com/food.html</loc><priority>0.8</priority></url>
+  <url><loc>https://marwanwareth.com/interiors.html</loc><priority>0.8</priority></url>
+  <url><loc>https://marwanwareth.com/fashion.html</loc><priority>0.7</priority></url>
+  <url><loc>https://marwanwareth.com/corporate.html</loc><priority>0.7</priority></url>
 </urlset>
