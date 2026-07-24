@@ -173,6 +173,23 @@
     .cursor{display:none}
   }
 
+  
+  /* ---- editorial serif-italic treatment (matches reference) ---- */
+  .site{--serif:"Instrument Serif","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .ser{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:.005em}
+  .hero h1{font-weight:600}
+  .hero h1 .l2{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--ink);letter-spacing:-.01em}
+  .studio .big em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--ink)}
+  .contact h2 .ser{color:var(--ink)}
+  .hero .tagline{color:var(--ink);opacity:.78;font-size:16.5px;max-width:400px;margin:0 0 24px}
+  /* statement band */
+  .statement{border-top:1px solid var(--line);padding:clamp(64px,11vh,130px) 0}
+  .statement h2{font-size:clamp(30px,5.2vw,66px);letter-spacing:-.04em;line-height:1.04;max-width:19ch;text-wrap:balance}
+  .statement h2 em{font-family:var(--serif);font-style:italic;font-weight:400}
+  .statement .lbl{margin-bottom:20px}
+  /* category card description */
+  .cat .meta .cd{font-family:var(--mono);font-size:11px;opacity:.82;margin-top:7px;max-width:32ch;line-height:1.5}
+
   /* ---- category grid (gallery index) ---- */
   .catgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(14px,1.6vw,24px)}
   .cat{position:relative;overflow:hidden;border-radius:4px;border:1px solid var(--line);aspect-ratio:4/5;display:block;background:var(--panel-2)}
